@@ -86,9 +86,9 @@ function MyPicker() {
         <Picker.Item value="item1">
           {({ selected }) => (
             /* Use the `selected` state to conditionally style the selected item */
-            <div style={{ color: selected ? 'red' : 'black' }}>
+            <View style={{ color: selected ? 'red' : 'black' }}>
               Item 1
-            </div>
+            </View>
           )}
         </Picker.Item>
         {/* ... */}

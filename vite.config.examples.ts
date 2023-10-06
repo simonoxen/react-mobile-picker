@@ -9,7 +9,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'react-mobile-picker': resolve(__dirname, './lib'),
+      'react-mobile-picker': resolve(__dirname, './src'),
     },
   },
 })

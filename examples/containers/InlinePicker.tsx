@@ -5,7 +5,7 @@ function renderOptions(options: string[], selectedColor: string) {
   return options.map((option) => (
     <Picker.Item key={option} value={option}>
       {({ selected }) => (
-        <div className={selected ? `font-semibold ${selectedColor}` : 'text-neutral-400'}>{option}</div>
+        <View className={selected ? `font-semibold ${selectedColor}` : 'text-neutral-400'}>{option}</View>
       )}
     </Picker.Item>
   ))
@@ -19,12 +19,12 @@ export default function InlinePicker() {
   })
 
   return <>
-    <div
+    <View
       className="
         mb-2 px-4 h-12 flex items-center bg-white
         border-t border-b border-gray-200 border-solid
       "
-    >Hi, {pickerValue.title} {pickerValue.firstName} {pickerValue.lastName}</div>
+    >Hi, {pickerValue.title} {pickerValue.firstName} {pickerValue.lastName}</View>
     <Picker
       className="px-4"
       value={pickerValue}

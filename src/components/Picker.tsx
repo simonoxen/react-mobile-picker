@@ -169,7 +169,7 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
   )
 
   return (
-    <div
+    <View
       style={{
         ...containerStyle,
         ...style,
@@ -181,10 +181,10 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
           {children}
         </PickerDataContext.Provider>
       </PickerActionsContext.Provider>
-      <div
+      <View
         style={highlightStyle}
       >
-        <div
+        <View
           style={{
             position: 'absolute',
             top: 0,
@@ -197,7 +197,7 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             transform: 'scaleY(0.5)',
           }}
         />
-        <div
+        <View
           style={{
             position: 'absolute',
             top: 'auto',
@@ -210,8 +210,8 @@ function PickerRoot<TType extends PickerValue>(props: PickerRootProps<TType>) {
             transform: 'scaleY(0.5)',
           }}
         />
-      </div>
-    </div>
+      </View>
+    </View>
   )
 }
 

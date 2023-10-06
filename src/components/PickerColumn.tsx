@@ -215,7 +215,7 @@ function PickerColumn({
   )
 
   return (
-    <div
+    <View
       style={{
         ...columnStyle,
         ...style,
@@ -229,7 +229,7 @@ function PickerColumn({
       <PickerColumnDataContext.Provider value={columnData}>
         {children}
       </PickerColumnDataContext.Provider>
-    </div>
+    </View>
   )
 }
 

@@ -47,7 +47,7 @@ function PickerItem({
   }, [pickerActions, key, value])
 
   return (
-    <div
+    <View
       style={{
         ...itemStyle,
         ...style,
@@ -57,7 +57,7 @@ function PickerItem({
       {...restProps}
     >
       {isFunction(children) ? children({ selected: pickerValue[key] === value }) : children}
-    </div>
+    </View>
   )
 }
 

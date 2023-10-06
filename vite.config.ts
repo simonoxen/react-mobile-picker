@@ -9,17 +9,17 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
-      entryRoot: resolve(__dirname, './lib'),
+      entryRoot: resolve(__dirname, './src'),
     }),
   ],
   resolve: {
     alias: {
-      'react-mobile-picker': resolve(__dirname, './lib'),
+      'react-mobile-picker': resolve(__dirname, './src'),
     },
   },
   build: {
-    lib: {
-      entry: resolve(__dirname, 'lib/index.ts'),
+    src: {
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'Picker',
       fileName: 'react-mobile-picker',
     },

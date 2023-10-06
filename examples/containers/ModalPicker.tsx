@@ -38,7 +38,7 @@ export default function ModalPicker() {
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={() => setIsOpen(false)}>
+        <Dialog as="View" className="relative z-10" onClose={() => setIsOpen(false)}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -48,11 +48,11 @@ export default function ModalPicker() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <View className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <View className="fixed inset-0 overflow-y-auto">
+            <View className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -69,7 +69,7 @@ export default function ModalPicker() {
                   >
                     Choose your birthday
                   </Dialog.Title>
-                  <div className="mt-2">
+                  <View className="mt-2">
                     <Picker
                       value={pickerValue}
                       onChange={handlePickerChange}
@@ -79,7 +79,7 @@ export default function ModalPicker() {
                         { Array.from({ length: 100 }, (_, i) => `${1923 + i}`).map((year) => (
                           <Picker.Item key={year} value={year}>
                             {({ selected }) => (
-                              <div className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{year}</div>
+                              <View className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{year}</View>
                             )}
                           </Picker.Item>
                         ))}
@@ -88,7 +88,7 @@ export default function ModalPicker() {
                         { Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, '0')).map((month) => (
                           <Picker.Item key={month} value={month}>
                             {({ selected }) => (
-                              <div className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{month}</div>
+                              <View className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{month}</View>
                             )}
                           </Picker.Item>
                         ))}
@@ -97,14 +97,14 @@ export default function ModalPicker() {
                         { getDayArray(Number(pickerValue.year), Number(pickerValue.month)).map((day) => (
                           <Picker.Item key={day} value={day}>
                             {({ selected }) => (
-                              <div className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{day}</div>
+                              <View className={selected ? 'font-semibold text-neutral-900' : 'text-neutral-400'}>{day}</View>
                             )}
                           </Picker.Item>
                         ))}
                       </Picker.Column>
                     </Picker>
-                  </div>
-                  <div className="mt-4">
+                  </View>
+                  <View className="mt-4">
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
@@ -112,11 +112,11 @@ export default function ModalPicker() {
                     >
                       OK
                     </button>
-                  </div>
+                  </View>
                 </Dialog.Panel>
               </Transition.Child>
-            </div>
-          </div>
+            </View>
+          </View>
         </Dialog>
       </Transition>
     </>
